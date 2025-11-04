@@ -1,4 +1,4 @@
-# 🧠 WhatsApp Bot — by [slowlyh]
+# 🧠 WhatsApp Bot
 
 > A modular, powerful, and easy-to-extend WhatsApp bot framework built with Node.js.
 
