@@ -15,12 +15,15 @@ import { unwatchFile, watchFile } from "fs";
 import { fileURLToPath } from "url";
 
 // Nomor pairing (untuk scan QR/Pairing code)
-global.PAIRING_NUMBER = 6283849999299;
+global.PAIRING_NUMBER = 62895622412769;
 
 global.BOT_PREFIXES = ".";
 
 // Nomor owner utama + cadangan
 global.ownerNumber = ["6283849999299", "62895622412769"];
+
+global.PAKASIR_SLUG = "takeshi";
+global.PAKASIR_API_KEY = "2v6UveJqyqIgkoNBf2lV7Q4vMowhpMkO";
 
 // Mode bot:
 // false  = self mode (hanya owner)

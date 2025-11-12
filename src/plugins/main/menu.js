@@ -1,7 +1,7 @@
 export default {
 	name: "menu",
 	command: ["menu", "help"],
-	category: "info",
+	category: "main",
 	description: "Display all available commands",
 
 	settings: {

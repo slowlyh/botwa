@@ -63,14 +63,23 @@ async function startWA() {
 
 	const sock = makeWASocket({
 		auth: {
-			creds: state.creds,
-			keys: makeCacheableSignalKeyStore(state.keys, pino().child({ level: "fatal", stream: "store" })),
-		},
-		version,
-		logger: pino({ level: "silent" }),
-		browser: Browsers.ubuntu("Edge"),
-		markOnlineOnConnect: false,
-		generateHighQualityLinkPreview: true,
+        creds: state.creds,
+        keys: makeCacheableSignalKeyStore(
+            state.keys,
+            pino().child({ level: 'fatal', stream: 'store' })
+        )
+    },
+    version,
+    logger: pino({ level: 'silent' }),
+    browser: Browsers.ubuntu('Edge'),
+    generateHighQualityLinkPreview: true,
+    syncFullHistory: false,
+    shouldSyncHistoryMessage: () => true,
+    markOnlineOnConnect: true,
+    connectTimeoutMs: 60_000,
+	keepAliveIntervalMs: 30_000,
+	retryRequestDelayMs: 250,
+	maxMsgRetryCount: 5
 	});
 
 	await Client(sock);
